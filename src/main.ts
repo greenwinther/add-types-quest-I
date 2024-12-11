@@ -8,7 +8,6 @@ import {
   arr,
 } from "./func/human";
 import {
-  averageMonsterAge,
   averageNumberOfTentacles,
   getAllNoWingedMonster,
   numberOfMonstersWithWings,
@@ -49,7 +48,7 @@ console.log(
 // vi vill ha en pretty print som skriver ut alla färger som hundarna har och hur många hundar det finns av varje färg
 
 console.log(`Vi har ${monsters.length} stycken monster.`);
-console.log(`Medelåldern på alla monster är ${averageMonsterAge(monsters)}`);
+console.log(`Medelåldern på alla monster är ${averageAge(monsters)}`);
 console.log(
   `Medelantalet tentakler för alla monster är ${averageNumberOfTentacles(
     monsters

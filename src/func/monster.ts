@@ -23,21 +23,19 @@ export const monsters: monsterUser[] = [
 
 export const prettyPrintMonster = (allUsers: monsterUser[]) => {
   allUsers.forEach((user) => {
-    console.log(`Monster: ${user.name}`);
-    console.log(`Age: ${user.age}`);
-    console.log(`Tentacles: ${user.tentacles}`);
-    console.log(`Eyes: ${user.eyes}`);
-    console.log(`Has Wings: ${user.hasWings}`);
+    console.log(
+      `Monster: ${user.name} Age: ${user.age} Tentacles: ${user.tentacles} Eyes: ${user.eyes} Has Wings: ${user.hasWings}`
+    );
   });
 };
 
-export const averageMonsterAge = (allUsers: monsterUser[]): number => {
+/* export const averageMonsterAge = (allUsers: monsterUser[]): number => {
   let allAges = 0;
   allUsers.forEach((user) => {
     allAges += user.age;
   });
   return Math.round(allAges / allUsers.length);
-};
+}; */
 
 //Optimized version
 export const averageNumberOfTentacles = (allUsers: monsterUser[]): number => {

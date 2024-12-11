@@ -29,14 +29,31 @@ export const arr: humanUser[] = [
   },
 ];
 
-//Added type to allUsers "(allUsers: humanUser[]): number"
-export const averageAge = (allUsers: humanUser[]): number => {
+// A function which calculates the average age of the humans
+/* export const averageAge = (allUsers: humanUser[]): number => {
   let allAges = 0;
   allUsers.forEach((u) => {
     allAges += u.age;
   });
-  return allAges / allUsers.length;
+  return Math.round(allAges / allUsers.length);
+}; */
+
+export const averageAge = <T extends { age: number }>(
+  allUsers: T[]
+): number => {
+  let allAges = 0;
+  allUsers.forEach((u) => {
+    allAges += u.age;
+  });
+  return Math.round(allAges / allUsers.length);
 };
+
+/* export const averageAge = <T extends { age: number }>(
+  allUsers: T[]
+): number => {
+  const totalAge = allUsers.reduce((sum, allUsers) => sum + allUsers.age, 0);
+  return Math.round(totalAge / allUsers.length);
+}; */
 
 //Added type to allUsers "(allUsers: humanUser[]): number"
 export const averageNumberOfHobbies = (allUsers: humanUser[]): number => {
